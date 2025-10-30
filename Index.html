@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- KS Consultants — Complete One-Page Site (updated with About section + fixed form) -->
+  <!-- KS Consultants — Complete One-Page Site -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KS Consultants — Experts in AI</title>
-  <meta name="description" content="KS Consultants helps small businesses, startups, schools, and financial firms harness AI and automation to save time, boost productivity, and grow smarter." />
+  <meta name="description" content="KS Consultants helps small businesses, startups, and financial firms harness AI and automation to save time, boost productivity, and grow smarter." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
@@ -47,6 +47,7 @@
     .brand-gradient { background: linear-gradient(135deg, #00366F, #00A8FF); }
     .brand-text { background: linear-gradient(135deg, #00366F, #00A8FF); -webkit-background-clip:text; background-clip:text; color:transparent; }
 
+    /* Hero (lighter blues so logo stands out) */
     .hero-wrap {
       position: relative;
       background:
@@ -60,24 +61,29 @@
   <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
+      <!-- Full logo + brand text -->
       <a href="/" class="flex items-center gap-3">
         <img src="./logo-full.png" alt="KS Consultants full logo" class="h-8 w-auto" />
-        <span class="text-lg font-extrabold tracking-tight brand-text hidden sm:inline">KS Consultants</span>
+        <span class="text-lg font-extrabold tracking-tight brand-text hidden sm:inline">
+          KS Consultants
+        </span>
       </a>
 
       <nav class="hidden md:flex items-center gap-5 text-sm">
         <a href="#services" class="hover:text-brand-600">Services</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
         <a href="#approach" class="hover:text-brand-600">Approach</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">Book a Consultation</a>
+        <a href="#about" class="hover:text-brand-600">About</a>
+        <a href="#contact" class="px-3 py-1.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">
+          Book a Consultation
+        </a>
       </nav>
       <button id="menuBtn" class="md:hidden px-3 py-1.5 rounded-lg border border-slate-300">Menu</button>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 bg-white/95 backdrop-blur">
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
       <div class="px-4 py-3 flex flex-col gap-2 text-sm">
         <a href="#services" class="hover:text-brand-600">Services</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
         <a href="#approach" class="hover:text-brand-600">Approach</a>
+        <a href="#about" class="hover:text-brand-600">About</a>
         <a href="#contact" class="px-3 py-1.5 rounded-lg text-white brand-gradient w-max">Book a Consultation</a>
       </div>
     </div>
@@ -87,12 +93,22 @@
     <!-- HERO -->
     <section class="hero-wrap">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 relative">
-        <img src="./logo-full.png" alt="KS Consultants logo" class="hidden md:block absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 w-56 lg:w-72 xl:w-80" style="filter: drop-shadow(0 10px 22px rgba(0,0,0,.2)) drop-shadow(0 0 18px rgba(255,255,255,.25));" />
+        <!-- Right-side logo -->
+        <img
+          src="./logo-full.png"
+          alt="KS Consultants logo"
+          class="hidden md:block absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 w-56 lg:w-72 xl:w-80"
+          style="filter: drop-shadow(0 10px 22px rgba(0,0,0,.2)) drop-shadow(0 0 18px rgba(255,255,255,.25));"
+        />
 
         <div class="max-w-3xl">
           <p class="uppercase tracking-wider text-brand-300 font-semibold text-xs mb-2">Experts in AI</p>
-          <h1 class="text-white text-3xl sm:text-5xl font-extrabold leading-tight">One-on-One AI Consulting for <span class="whitespace-nowrap">Smarter, Faster</span> Business</h1>
-          <p class="mt-4 text-base sm:text-lg text-slate-100/95">We help small businesses, schools, and financial firms harness <strong>AI and automation</strong> to save time, boost productivity, and unlock smarter growth.</p>
+          <h1 class="text-white text-3xl sm:text-5xl font-extrabold leading-tight">
+            One-on-One AI Consulting for <span class="whitespace-nowrap">Smarter, Faster</span> Business
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-100/95">
+            We help small businesses, startups, and financial firms harness <strong>AI and automation</strong> to save time, boost productivity, and unlock smarter growth.
+          </p>
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
             <a href="#contact" class="px-5 py-2.5 rounded-full text-slate-900 bg-white font-semibold shadow-soft text-center">Book a Consultation</a>
             <a href="#services" class="px-5 py-2.5 rounded-full text-white ring-1 ring-white/40 hover:ring-white/80 text-center">Explore Services</a>
@@ -105,49 +121,27 @@
     <section id="services" class="py-12 sm:py-14 bg-slate-50">
       <div class="mx-auto max-w-6xl px-4">
         <h2 class="text-2xl sm:text-3xl font-bold mb-6 reveal">What We Do</h2>
+
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
             <h3 class="font-semibold">AI Strategy & Implementation</h3>
             <p class="mt-2 text-sm text-slate-600">Map your AI journey from opportunity to ROI.</p>
           </article>
+
           <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
             <h3 class="font-semibold">Automation & Process Optimisation</h3>
             <p class="mt-2 text-sm text-slate-600">Reduce manual work and increase accuracy.</p>
           </article>
-          <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
+
+        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
             <h3 class="font-semibold">AI Training & Upskilling</h3>
             <p class="mt-2 text-sm text-slate-600">Teach your team the tools that matter.</p>
           </article>
+
           <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
             <h3 class="font-semibold">Executive AI Advisory</h3>
             <p class="mt-2 text-sm text-slate-600">Strategic insight for decision-makers.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-12 sm:py-14 bg-white">
-      <div class="mx-auto max-w-6xl px-4 grid lg:grid-cols-[1.1fr_.9fr] gap-10 items-start">
-        <div class="reveal">
-          <p class="text-xs uppercase tracking-wide text-brand-500 font-semibold mb-2">About KS Consultants</p>
-          <h2 class="text-2xl sm:text-3xl font-bold mb-3">AI consulting grounded in NZ education & business</h2>
-          <p class="text-slate-700 leading-relaxed">KS Consultants helps New Zealand schools, small–to–medium businesses, and financial / mortgage teams make AI real — not theoretical. We focus on rapid wins (content, automations, reporting) that staff can own after the session, so you aren’t locked into a vendor.</p>
-          <p class="mt-4 text-slate-600 text-sm">Led by Kent Somerville, a NZ deputy principal and AI PD lead, we design training and solutions that match the new NZ curriculum, your internal workflows, and your security settings.</p>
-          <ul class="mt-5 space-y-2 text-sm text-slate-700">
-            <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>AI PD for teachers and leaders</li>
-            <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Automation & prompt systems for mortgage / financial advisers</li>
-            <li class="flex gap-2"><span class="mt-1 h-1.5 w-1.5 rounded-full bg-brand-500"></span>Small business AI setup: email, content, client intake</li>
-          </ul>
-        </div>
-        <div class="bg-slate-50/80 border border-slate-200 rounded-2xl p-6 shadow-soft reveal">
-          <h3 class="font-semibold text-slate-900">Quick snapshot</h3>
-          <dl class="mt-4 space-y-3 text-sm">
-            <div class="flex items-start justify-between gap-2"><dt class="text-slate-600">Base</dt><dd class="font-medium text-slate-900">Auckland, NZ</dd></div>
-            <div class="flex items-start justify-between gap-2"><dt class="text-slate-600">Core services</dt><dd class="text-right">AI PD · Automations · Custom GPT / Gemini builds</dd></div>
-            <div class="flex items-start justify-between gap-2"><dt class="text-slate-600">Fav stacks</dt><dd class="text-right">Google Workspace, Gemini, ChatGPT, Netlify</dd></div>
-            <div class="flex items-start justify-between gap-2"><dt class="text-slate-600">Contact</dt><dd class="text-right"><a href="mailto:ks.ai.consultants@gmail.com" class="text-brand-600 underline">ks.ai.consultants@gmail.com</a></dd></div>
-          </dl>
         </div>
       </div>
     </section>
@@ -157,16 +151,33 @@
       <div class="mx-auto max-w-6xl px-4">
         <h2 class="text-2xl sm:text-3xl font-bold mb-6 reveal">How We Work</h2>
         <div class="grid md:grid-cols-4 gap-5">
-          <div class="p-5 border border-slate-200 rounded-xl reveal"><div class="text-xs font-semibold text-brand-600">01</div><h3 class="mt-1 font-semibold">Discover</h3><p class="mt-1.5 text-sm text-slate-600">Assess workflows and identify high-value AI opportunities.</p></div>
-          <div class="p-5 border border-slate-200 rounded-xl reveal"><div class="text-xs font-semibold text-brand-600">02</div><h3 class="mt-1 font-semibold">Design</h3><p class="mt-1.5 text-sm text-slate-600">Co-create a tailored strategy and measurement plan.</p></div>
-          <div class="p-5 border border-slate-200 rounded-xl reveal"><div class="text-xs font-semibold text-brand-600">03</div><h3 class="mt-1 font-semibold">Deliver</h3><p class="mt-1.5 text-sm text-slate-600">Build, train, and optimise to embed AI effectively.</p></div>
-          <div class="p-5 border border-slate-200 rounded-xl reveal"><div class="text-xs font-semibold text-brand-600">04</div><h3 class="mt-1 font-semibold">Scale</h3><p class="mt-1.5 text-sm text-slate-600">Expand adoption with governance and continuous support.</p></div>
+          <div class="p-5 border border-slate-200 rounded-xl reveal">
+            <div class="text-xs font-semibold text-brand-600">01</div>
+            <h3 class="mt-1 font-semibold">Discover</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Assess workflows and identify high-value AI opportunities.</p>
+          </div>
+          <div class="p-5 border border-slate-200 rounded-xl reveal">
+            <div class="text-xs font-semibold text-brand-600">02</div>
+            <h3 class="mt-1 font-semibold">Design</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Co-create a tailored strategy and measurement plan.</p>
+          </div>
+          <div class="p-5 border border-slate-200 rounded-xl reveal">
+            <div class="text-xs font-semibold text-brand-600">03</div>
+            <h3 class="mt-1 font-semibold">Deliver</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Build, train, and optimise to embed AI effectively.</p>
+          </div>
+          <div class="p-5 border border-slate-200 rounded-xl reveal">
+            <div class="text-xs font-semibold text-brand-600">04</div>
+            <h3 class="mt-1 font-semibold">Scale</h3>
+            <p class="mt-1.5 text-sm text-slate-600">Expand adoption with governance and continuous support.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- CONTACT (with layered hills & NEW FORM STYLE) -->
     <section id="contact" class="relative pt-12 sm:pt-16 pb-36 sm:pb-48">
+      <!-- hills behind -->
       <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10">
         <img src="./footer-hills.png" alt="" class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,.25)]" />
       </div>
@@ -175,27 +186,48 @@
         <div class="grid lg:grid-cols-2 gap-6 items-start">
           <div class="reveal">
             <h2 class="text-2xl sm:text-3xl font-bold">Let’s Discuss Your AI Strategy</h2>
-            <p class="mt-3 text-slate-700">Whether you’re exploring automation for the first time or ready to scale adoption, we’ll help you find the smartest path forward.</p>
+            <p class="mt-3 text-slate-700">
+              Whether you’re exploring automation for the first time or ready to scale adoption,
+              we’ll help you find the smartest path forward.
+            </p>
           </div>
 
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="bg-white border border-slate-100 rounded-2xl p-6 shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] reveal">
-            <input type="hidden" name="form-name" value="contact" />
-            <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
-            <label class="block text-sm font-medium text-slate-800">Name</label>
-            <input type="text" name="name" required class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
-            <label class="block text-sm font-medium text-slate-800 mt-4">Email</label>
-            <input type="email" name="email" required class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
-            <label class="block text-sm font-medium text-slate-800 mt-4">Message</label>
-            <textarea name="message" rows="5" required class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-xl px-4 py-2.5"></textarea>
-            <button type="submit" class="mt-5 w-full px-5 py-2.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">Book a Consultation</button>
-          </form>
+          <!-- NEW FORM: white card + blue-bordered rounded inputs + gradient pill button -->
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html"
+      class="bg-white border border-slate-100 rounded-2xl p-6 shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] reveal">
+  <!-- REQUIRED hidden field: must match the form name -->
+  <input type="hidden" name="form-name" value="contact" />
+  <!-- Honeypot (spam trap) -->
+  <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
 
-          <p class="mt-2 text-xs text-slate-500">Prefer email? <a class="underline text-brand-600" href="mailto:ks.ai.consultants@gmail.com">ks.ai.consultants@gmail.com</a></p>
+  <label class="block text-sm font-medium text-slate-800">Name</label>
+  <input type="text" name="name" required
+         class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
+
+  <label class="block text-sm font-medium text-slate-800 mt-4">Email</label>
+  <input type="email" name="email" required
+         class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
+
+  <label class="block text-sm font-medium text-slate-800 mt-4">Message</label>
+  <textarea name="message" rows="5" required
+            class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-xl px-4 py-2.5"></textarea>
+
+  <button type="submit"
+          class="mt-5 w-full px-5 py-2.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">
+    Book a Consultation
+  </button>
+</form>
+
+            <p class="mt-2 text-xs text-slate-500">
+              Prefer email? <a class="underline text-brand-600" href="mailto:ks.ai.consultants@gmail.com">ks.ai.consultants@gmail.com</a>
+            </p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="py-6 bg-slate-900 text-slate-200">
     <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
       <div>© <span id="year"></span> KS Consultants — Experts in AI</div>
@@ -206,5 +238,16 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script>
-    document.getElementById('menuBtn').addEventListener('click', ()
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.toggle('hidden');
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
