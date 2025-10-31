@@ -46,14 +46,6 @@
     :root { --grad-start:#34b3ff; --grad-end:#8ddcff; }
     .brand-gradient { background: linear-gradient(135deg, #00366F, #00A8FF); }
     .brand-text { background: linear-gradient(135deg, #00366F, #00A8FF); -webkit-background-clip:text; background-clip:text; color:transparent; }
-
-    /* Hero (lighter blues so logo stands out) */
-    .hero-wrap {
-      position: relative;
-      background:
-        linear-gradient(to bottom, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-        linear-gradient(135deg, #34b3ff 0%, #19a4ef 45%, #8ddcff 100%);
-    }
   </style>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
@@ -90,36 +82,59 @@
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero-wrap">
-      <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 relative">
-        <!-- Right-side logo -->
-        <img
-          src="./logo-full.png"
-          alt="KS Consultants logo"
-          class="hidden md:block absolute right-4 lg:right-10 top-1/2 -translate-y-1/2 w-56 lg:w-72 xl:w-80"
-          style="filter: drop-shadow(0 10px 22px rgba(0,0,0,.2)) drop-shadow(0 0 18px rgba(255,255,255,.25));"
-        />
+    <!-- HERO (new, matches contact style) -->
+    <section class="relative pt-16 pb-28 bg-white overflow-hidden" id="home">
+      <!-- bottom hills (same as contact) -->
+      <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
+        <img src="./footer-hills.png" alt="" class="w-full h-auto" />
+      </div>
 
-        <div class="max-w-3xl">
-          <p class="uppercase tracking-wider text-slate-100/80 font-semibold text-xs mb-2">
-            New Zealand • Small Businesses • Education Centres
+      <div class="mx-auto max-w-6xl px-4 relative z-10 grid lg:grid-cols-2 gap-10 items-center">
+        <!-- LEFT: text -->
+        <div>
+          <p class="uppercase tracking-wider text-slate-500 font-semibold text-xs mb-3">
+            Auckland • Small business • AI training
           </p>
-          <h1 class="text-white text-3xl sm:text-5xl font-extrabold leading-tight">
+          <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
             AI that frees you to serve clients better.
           </h1>
-          <p class="mt-4 text-base sm:text-lg text-slate-100/95">
-            KS Consultants shows your team how to use AI automation, and can teach you to use a range of AI platforms safely
-            so you can spend less time on admin and more time growing your business.
+          <p class="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
+            KS Consultants shows your team how to use AI, automation, and Gemini/ChatGPT safely so you can spend less time on admin and more time growing your business.
           </p>
-          <!-- inserted line -->
-          <p class="mt-2 text-sm sm:text-base text-slate-100/90">
+          <!-- your line -->
+          <p class="mt-2 text-sm sm:text-base text-slate-600">
             We make AI usable, teachable, and profitable for your team.
           </p>
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#contact" class="px-5 py-2.5 rounded-full text-slate-900 bg-white font-semibold shadow-soft text-center">Book a Consultation</a>
-            <a href="#services" class="px-5 py-2.5 rounded-full text-white ring-1 ring-white/40 hover:ring-white/80 text-center">What we do</a>
+            <a href="#contact" class="px-5 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF] shadow-soft text-center">
+              Book a Consultation
+            </a>
+            <a href="#services" class="px-5 py-2.5 rounded-full text-slate-900/80 ring-1 ring-slate-200 bg-white text-center">
+              What we do
+            </a>
           </div>
+          <p class="mt-4 text-xs text-slate-500">
+            Founded in Auckland by Kent Somerville • KS Consultants — Experts in AI
+          </p>
+        </div>
+
+        <!-- RIGHT: card to match contact form style -->
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
+              <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
+            </div>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-700">
+            <li>• Automate 1–2 manual client processes per week</li>
+            <li>• Train staff to use Gemini / ChatGPT in NZ context</li>
+            <li>• Create reusable AI prompts for reports & comms</li>
+          </ul>
+          <a href="#contact" class="mt-5 inline-flex justify-center w-full px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF]">
+            Talk to us about your team
+          </a>
         </div>
       </div>
     </section>
@@ -226,7 +241,7 @@
     <!-- CONTACT (with layered hills & NEW FORM STYLE) -->
     <section id="contact" class="relative pt-12 sm:pt-16 pb-36 sm:pb-48">
       <!-- hills behind -->
-      <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10">
+      <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
         <img src="./footer-hills.png" alt="" class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,.25)]" />
       </div>
 
@@ -240,7 +255,7 @@
             </p>
           </div>
 
-          <!-- NEW FORM: white card + blue-bordered rounded inputs + gradient pill button -->
+          <!-- FORM -->
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html"
                 class="bg-white border border-slate-100 rounded-2xl p-6 shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] reveal">
             <!-- REQUIRED hidden field: must match the form name -->
@@ -275,14 +290,14 @@
 
   <!-- FOOTER -->
   <footer class="relative z-20 py-6 bg-slate-900 text-slate-200">
-  <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-    <div>© <span id="year"></span> KS Consultants — Experts in AI</div>
-    <div class="flex items-center gap-4">
-      <a class="hover:text-white" href="mailto:ks.ai.consultants@gmail.com">Email</a>
-      <a class="hover:text-white" href="https://ksconsultants.org">ks.ai.consultants@gmail.com</a>
+    <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+      <div>© <span id="year"></span> KS Consultants — Experts in AI</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:text-white" href="mailto:ks.ai.consultants@gmail.com">Email</a>
+        <a class="hover:text-white" href="https://ksconsultants.org">ksconsultants.org</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <!-- JS -->
   <script>
