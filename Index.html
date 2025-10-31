@@ -81,21 +81,22 @@
 
   <main>
 
-    <!-- HERO (fixed z-index so text is readable) -->
+    <!-- HERO (with logo + fixed layering) -->
     <section class="relative pt-16 pb-28 bg-white overflow-hidden" id="home">
-      <!-- 1) HILLS at the very back -->
-      <div aria-hidden="true"
-           class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
+      <!-- Hills at back -->
+      <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
         <img src="./footer-hills.png" alt="" class="w-full h-auto" />
       </div>
 
-      <!-- 2) WHITE GRADIENT on top of the hills -->
+      <!-- White gradient overlay for contrast -->
       <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-transparent z-10"></div>
 
-      <!-- 3) CONTENT on top of everything -->
+      <!-- Main content -->
       <div class="relative z-20 mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-center">
-        <!-- LEFT: text -->
+        <!-- LEFT SIDE -->
         <div>
+          <img src="./logo-full.png" alt="KS Consultants logo" class="h-10 sm:h-12 w-auto mb-4 drop-shadow-[0_4px_8px_rgba(0,0,0,0.15)]">
+
           <p class="uppercase tracking-wider text-slate-600 font-semibold text-xs mb-3">
             Auckland • Small business • AI training
           </p>
@@ -103,8 +104,7 @@
             AI that frees you to serve clients better.
           </h1>
           <p class="mt-4 text-[#0b294b] text-base sm:text-lg max-w-xl">
-            KS Consultants shows your team how to use AI automation, and a range of AI tools safely
-            so you can spend less time on admin and more time growing your business.
+            KS Consultants shows your team how to use AI, automation, and Gemini / ChatGPT safely so you can spend less time on admin and more time growing your business.
           </p>
           <p class="mt-2 text-sm sm:text-base text-[#0b294b]">
             We make AI usable, teachable, and profitable for your team.
@@ -122,10 +122,11 @@
           </div>
 
           <p class="mt-4 text-xs text-slate-500">
+            Founded in Auckland by Kent Somerville • KS Consultants — Experts in AI
           </p>
         </div>
 
-        <!-- RIGHT: info card -->
+        <!-- RIGHT CARD -->
         <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6">
           <div class="flex items-center gap-3 mb-4">
             <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto">
@@ -206,23 +207,18 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="py-12 sm:py-14 bg-slate-50">
+    <section id="about" class="py-12 sm:py-14 bg-white">
       <div class="mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-8 items-center">
         <div class="reveal">
           <h2 class="text-2xl sm:text-3xl font-bold mb-4">About KS Consultants</h2>
           <p class="text-slate-600 mb-4">
-            KS Consultants was founded in Auckland, New Zealand, by <strong>Kent Somerville</strong> to help local
-            businesses, schools, and professional services actually get value from AI — not just talk about it.
+            KS Consultants was founded in Auckland, New Zealand, by <strong>Kent Somerville</strong> to help local businesses, schools, and professional services actually get value from AI — not just talk about it.
           </p>
           <p class="text-slate-600 mb-4">
-            We started by supporting education leaders and small business owners who were being asked
-            to “use AI” but weren’t given a safe, practical way to do it. Today we help teams adopt
-            tools like Gemini and ChatGPT, build reusable prompt libraries, and automate the everyday
-            admin that gets in the way of serving clients.
+            We started by supporting education leaders and small business owners who were being asked to “use AI” but weren’t given a safe, practical way to do it. Today we help teams adopt tools like Gemini and ChatGPT, build reusable prompt libraries, and automate the everyday admin that gets in the way of serving clients.
           </p>
           <p class="text-slate-600 mb-4">
-            Our focus is simple: <strong>teach people, not just tools</strong>. If your team can use it tomorrow,
-            we’ve done our job.
+            Our focus is simple: <strong>teach people, not just tools</strong>. If your team can use it tomorrow, we’ve done our job.
           </p>
           <ul class="space-y-2 text-slate-700 text-sm">
             <li>• Small business owners & professional services (accounting, legal, marketing)</li>
@@ -248,7 +244,6 @@
 
     <!-- CONTACT -->
     <section id="contact" class="relative pt-12 sm:pt-16 pb-36 sm:pb-48">
-      <!-- hills behind -->
       <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
         <img src="./footer-hills.png" alt="" class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,.25)]" />
       </div>
@@ -258,12 +253,10 @@
           <div class="reveal">
             <h2 class="text-2xl sm:text-3xl font-bold">Let’s discuss your AI strategy</h2>
             <p class="mt-3 text-slate-700">
-              Whether you’re exploring automation for the first time or ready to scale adoption,
-              we’ll help you find the smartest path forward.
+              Whether you’re exploring automation for the first time or ready to scale adoption, we’ll help you find the smartest path forward.
             </p>
           </div>
 
-          <!-- FORM -->
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html"
                 class="bg-white border border-slate-100 rounded-2xl p-6 shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] reveal">
             <input type="hidden" name="form-name" value="contact" />
@@ -271,50 +264,4 @@
 
             <label class="block text-sm font-medium text-slate-800">Name</label>
             <input type="text" name="name" required
-                   class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
-
-            <label class="block text-sm font-medium text-slate-800 mt-4">Email</label>
-            <input type="email" name="email" required
-                   class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
-
-            <label class="block text-sm font-medium text-slate-800 mt-4">Message</label>
-            <textarea name="message" rows="5" required
-                      class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-xl px-4 py-2.5"></textarea>
-
-            <button type="submit"
-                    class="mt-5 w-full px-5 py-2.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">
-              Book a Consultation
-            </button>
-            <p class="mt-2 text-xs text-slate-500">
-              Prefer email? <a class="underline text-brand-600" href="mailto:ks.ai.consultants@gmail.com">ks.ai.consultants@gmail.com</a>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="relative z-20 py-6 bg-slate-900 text-slate-200">
-    <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-      <div>© <span id="year"></span> KS Consultants — Experts in AI</div>
-      <div class="flex items-center gap-4">
-        <a class="hover:text-white" href="mailto:ks.ai.consultants@gmail.com">Email</a>
-        <a class="hover:text-white" href="https://ksconsultants.org">ksconsultants.org</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JS -->
-  <script>
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.toggle('hidden');
-    });
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+                   class="mt-1 w
