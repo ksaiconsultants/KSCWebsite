@@ -1,314 +1,65 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <!-- KS Consultants — Complete One-Page Site -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KS Consultants — AI Consulting & Training for NZ Businesses (Auckland)</title>
-  <meta name="description" content="KS Consultants, founded in Auckland by Kent Somerville, helps New Zealand organisations use AI, automation, Gemini and ChatGPT safely to free up staff time, improve client service, and grow profitably." />
+<!-- HERO (revised for contrast) -->
+<section class="relative pt-16 pb-28 bg-white overflow-hidden" id="home">
+  <!-- subtle white gradient overlay behind content -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-transparent z-0"></div>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png" />
-  <link rel="apple-touch-icon" href="./favicon.png" />
-  <link rel="mask-icon" href="./favicon.png" color="#0ea5e9">
-  <meta name="theme-color" content="#0ea5e9" />
+  <!-- bottom hills -->
+  <div aria-hidden="true"
+       class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
+    <img src="./footer-hills.png" alt="" class="w-full h-auto" />
+  </div>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- main content -->
+  <div class="relative z-10 mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+    <!-- LEFT: text -->
+    <div>
+      <p class="uppercase tracking-wider text-slate-600 font-semibold text-xs mb-3">
+        Auckland • Small business • AI training
+      </p>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#002b59] leading-tight">
+        AI that frees you to serve clients better.
+      </h1>
+      <p class="mt-4 text-[#0b294b] text-base sm:text-lg max-w-xl">
+        KS Consultants shows your team how to use AI, automation, and Gemini / ChatGPT safely so you can spend less time on admin and more time growing your business.
+      </p>
+      <p class="mt-2 text-sm sm:text-base text-[#0b294b]">
+        We make AI usable, teachable, and profitable for your team.
+      </p>
 
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
-          colors: {
-            brand: {
-              900: '#00366F',
-              700: '#0b4b86',
-              600: '#0277bd',
-              500: '#0ea5e9',
-              300: '#67d4ff'
-            }
-          },
-          boxShadow: { soft: '0 6px 18px -6px rgba(0,0,0,.15)' }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    html { scroll-behavior: smooth; }
-    .reveal { opacity: 0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease; }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-
-    :root { --grad-start:#34b3ff; --grad-end:#8ddcff; }
-    .brand-gradient { background: linear-gradient(135deg, #00366F, #00A8FF); }
-    .brand-text { background: linear-gradient(135deg, #00366F, #00A8FF); -webkit-background-clip:text; background-clip:text; color:transparent; }
-  </style>
-</head>
-<body class="bg-white text-slate-900 font-sans antialiased">
-
-  <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
-      <!-- Full logo + brand text -->
-      <a href="/" class="flex items-center gap-3">
-        <img src="./logo-full.png" alt="KS Consultants full logo" class="h-8 w-auto" />
-        <span class="text-lg font-extrabold tracking-tight brand-text hidden sm:inline">
-          KS Consultants
-        </span>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-5 text-sm">
-        <a href="#services" class="hover:text-brand-600">Services</a>
-        <a href="#approach" class="hover:text-brand-600">Approach</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a href="#contact"
+           class="px-5 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF] shadow-soft text-center">
           Book a Consultation
         </a>
-      </nav>
-      <button id="menuBtn" class="md:hidden px-3 py-1.5 rounded-lg border border-slate-300">Menu</button>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
-      <div class="px-4 py-3 flex flex-col gap-2 text-sm">
-        <a href="#services" class="hover:text-brand-600">Services</a>
-        <a href="#approach" class="hover:text-brand-600">Approach</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-lg text-white brand-gradient w-max">Book a Consultation</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO (new, matches contact style) -->
-    <section class="relative pt-16 pb-28 bg-white overflow-hidden" id="home">
-      <!-- bottom hills (same as contact) -->
-      <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
-        <img src="./footer-hills.png" alt="" class="w-full h-auto" />
+        <a href="#services"
+           class="px-5 py-2.5 rounded-full text-[#0f172a] ring-1 ring-slate-200 bg-white text-center hover:bg-slate-50">
+          What we do
+        </a>
       </div>
 
-      <div class="mx-auto max-w-6xl px-4 relative z-10 grid lg:grid-cols-2 gap-10 items-center">
-        <!-- LEFT: text -->
+      <p class="mt-4 text-xs text-slate-500">
+        Founded in Auckland by Kent Somerville • KS Consultants — Experts in AI
+      </p>
+    </div>
+
+    <!-- RIGHT: info card -->
+    <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto">
         <div>
-          <p class="uppercase tracking-wider text-slate-500 font-semibold text-xs mb-3">
-            Auckland • Small business • AI training
-          </p>
-          <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
-            AI that frees you to serve clients better.
-          </h1>
-          <p class="mt-4 text-slate-600 text-base sm:text-lg max-w-xl">
-            KS Consultants shows your team how to use AI, automation, and Gemini/ChatGPT safely so you can spend less time on admin and more time growing your business.
-          </p>
-          <!-- your line -->
-          <p class="mt-2 text-sm sm:text-base text-slate-600">
-            We make AI usable, teachable, and profitable for your team.
-          </p>
-          <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#contact" class="px-5 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF] shadow-soft text-center">
-              Book a Consultation
-            </a>
-            <a href="#services" class="px-5 py-2.5 rounded-full text-slate-900/80 ring-1 ring-slate-200 bg-white text-center">
-              What we do
-            </a>
-          </div>
-          <p class="mt-4 text-xs text-slate-500">
-            Founded in Auckland by Kent Somerville • KS Consultants — Experts in AI
-          </p>
-        </div>
-
-        <!-- RIGHT: card to match contact form style -->
-        <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto">
-            <div>
-              <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
-              <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
-            </div>
-          </div>
-          <ul class="space-y-3 text-sm text-slate-700">
-            <li>• Automate 1–2 manual client processes per week</li>
-            <li>• Train staff to use Gemini / ChatGPT in NZ context</li>
-            <li>• Create reusable AI prompts for reports & comms</li>
-          </ul>
-          <a href="#contact" class="mt-5 inline-flex justify-center w-full px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF]">
-            Talk to us about your team
-          </a>
+          <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
+          <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
         </div>
       </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-12 sm:py-14 bg-slate-50">
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-6 reveal">What we do</h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
-            <h3 class="font-semibold">AI Readiness & Roadmaps</h3>
-            <p class="mt-2 text-sm text-slate-600">Audit current tools, map 90-day AI wins, align to NZ privacy.</p>
-          </article>
-
-          <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
-            <h3 class="font-semibold">Team Training (Gemini / ChatGPT)</h3>
-            <p class="mt-2 text-sm text-slate-600">Workshops and PD so staff actually use AI every day.</p>
-          </article>
-
-          <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
-            <h3 class="font-semibold">Workflow & Forms Automation</h3>
-            <p class="mt-2 text-sm text-slate-600">Reduce manual quoting, reporting, parent comms, onboarding.</p>
-          </article>
-
-          <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
-            <h3 class="font-semibold">Executive / Leadership Advisory</h3>
-            <p class="mt-2 text-sm text-slate-600">Quarterly guidance for principals, directors, and practice owners.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPROACH -->
-    <section id="approach" class="py-12 sm:py-14">
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-2xl sm:text-3xl font-bold mb-6 reveal">How we work</h2>
-        <div class="grid md:grid-cols-4 gap-5">
-          <div class="p-5 border border-slate-200 rounded-xl reveal">
-            <div class="text-xs font-semibold text-brand-600">01</div>
-            <h3 class="mt-1 font-semibold">Discover</h3>
-            <p class="mt-1.5 text-sm text-slate-600">Assess workflows and identify high-value AI opportunities.</p>
-          </div>
-          <div class="p-5 border border-slate-200 rounded-xl reveal">
-            <div class="text-xs font-semibold text-brand-600">02</div>
-            <h3 class="mt-1 font-semibold">Design</h3>
-            <p class="mt-1.5 text-sm text-slate-600">Co-create a tailored strategy and measurement plan.</p>
-          </div>
-          <div class="p-5 border border-slate-200 rounded-xl reveal">
-            <div class="text-xs font-semibold text-brand-600">03</div>
-            <h3 class="mt-1 font-semibold">Deliver</h3>
-            <p class="mt-1.5 text-sm text-slate-600">Build, train, and optimise to embed AI effectively.</p>
-          </div>
-          <div class="p-5 border border-slate-200 rounded-xl reveal">
-            <div class="text-xs font-semibold text-brand-600">04</div>
-            <h3 class="mt-1 font-semibold">Scale</h3>
-            <p class="mt-1.5 text-sm text-slate-600">Expand adoption with governance and continuous support.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT (new) -->
-    <section id="about" class="py-12 sm:py-14 bg-white">
-      <div class="mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-8 items-center">
-        <div class="reveal">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4">About KS Consultants</h2>
-          <p class="text-slate-600 mb-4">
-            KS Consultants was founded in Auckland, New Zealand, by <strong>Kent Somerville</strong> to help local
-            businesses, schools, and professional services actually get value from AI — not just talk about it.
-          </p>
-          <p class="text-slate-600 mb-4">
-            We started by supporting education leaders and small business owners who were being asked
-            to “use AI” but weren’t given a safe, practical way to do it. Today we help teams adopt
-            tools like Gemini and ChatGPT, build reusable prompt libraries, and automate the everyday
-            admin that gets in the way of serving clients.
-          </p>
-          <p class="text-slate-600 mb-4">
-            Our focus is simple: <strong>teach people, not just tools</strong>. If your team can use it tomorrow,
-            we’ve done our job.
-          </p>
-          <ul class="space-y-2 text-slate-700 text-sm">
-            <li>• Small business owners & professional services (accounting, legal, marketing)</li>
-            <li>• Mortgage & financial advisers</li>
-            <li>• Schools & education teams adopting AI responsibly</li>
-            <li>• Community organisations that need to do more with less</li>
-          </ul>
-        </div>
-        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 shadow-soft reveal">
-          <h3 class="font-semibold mb-3">What makes us different</h3>
-          <ul class="space-y-2 text-sm text-slate-700">
-            <li>✅ NZ context (privacy, schools, finance)</li>
-            <li>✅ Training for non-technical staff</li>
-            <li>✅ Set-up + documentation you can reuse</li>
-            <li>✅ Ongoing advisory for leaders</li>
-          </ul>
-          <a href="#contact" class="inline-flex mt-5 px-4 py-2.5 rounded-full text-white brand-gradient">
-            Book a consultation
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT (with layered hills & NEW FORM STYLE) -->
-    <section id="contact" class="relative pt-12 sm:pt-16 pb-36 sm:pb-48">
-      <!-- hills behind -->
-      <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
-        <img src="./footer-hills.png" alt="" class="w-full h-auto drop-shadow-[0_8px_24px_rgba(0,0,0,.25)]" />
-      </div>
-
-      <div class="mx-auto max-w-6xl px-4 relative z-10">
-        <div class="grid lg:grid-cols-2 gap-6 items-start">
-          <div class="reveal">
-            <h2 class="text-2xl sm:text-3xl font-bold">Let’s discuss your AI strategy</h2>
-            <p class="mt-3 text-slate-700">
-              Whether you’re exploring automation for the first time or ready to scale adoption,
-              we’ll help you find the smartest path forward.
-            </p>
-          </div>
-
-          <!-- FORM -->
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html"
-                class="bg-white border border-slate-100 rounded-2xl p-6 shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] reveal">
-            <!-- REQUIRED hidden field: must match the form name -->
-            <input type="hidden" name="form-name" value="contact" />
-            <!-- Honeypot (spam trap) -->
-            <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
-
-            <label class="block text-sm font-medium text-slate-800">Name</label>
-            <input type="text" name="name" required
-                   class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
-
-            <label class="block text-sm font-medium text-slate-800 mt-4">Email</label>
-            <input type="email" name="email" required
-                   class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-full px-4 py-2.5" />
-
-            <label class="block text-sm font-medium text-slate-800 mt-4">Message</label>
-            <textarea name="message" rows="5" required
-                      class="mt-1 w-full border-2 border-brand-500 focus:border-brand-600 focus:ring-brand-600 outline-none rounded-xl px-4 py-2.5"></textarea>
-
-            <button type="submit"
-                    class="mt-5 w-full px-5 py-2.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">
-              Book a Consultation
-            </button>
-            <p class="mt-2 text-xs text-slate-500">
-              Prefer email? <a class="underline text-brand-600" href="mailto:ks.ai.consultants@gmail.com">ks.ai.consultants@gmail.com</a>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="relative z-20 py-6 bg-slate-900 text-slate-200">
-    <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-      <div>© <span id="year"></span> KS Consultants — Experts in AI</div>
-      <div class="flex items-center gap-4">
-        <a class="hover:text-white" href="mailto:ks.ai.consultants@gmail.com">Email</a>
-        <a class="hover:text-white" href="https://ksconsultants.org">ksconsultants.org</a>
-      </div>
+      <ul class="space-y-3 text-sm text-slate-700">
+        <li>• Automate 1–2 manual client processes per week</li>
+        <li>• Train staff to use Gemini / ChatGPT in NZ context</li>
+        <li>• Create reusable AI prompts for reports & comms</li>
+      </ul>
+      <a href="#contact"
+         class="mt-5 inline-flex justify-center w-full px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF]">
+        Talk to us about your team
+      </a>
     </div>
-  </footer>
-
-  <!-- JS -->
-  <script>
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.toggle('hidden');
-    });
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+  </div>
+</section>
