@@ -49,35 +49,72 @@
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased">
 
-  <!-- HEADER -->
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
-    <div class="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-3">
-        <img src="./logo-full.png" alt="KS Consultants full logo" class="h-8 w-auto" />
-        <span class="text-lg font-extrabold tracking-tight brand-text hidden sm:inline">
-          KS Consultants
-        </span>
-      </a>
+  <!-- HERO (revised for contrast) -->
+<section class="relative pt-16 pb-28 bg-white overflow-hidden" id="home">
+  <!-- subtle white gradient overlay behind content -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-transparent z-0"></div>
 
-      <nav class="hidden md:flex items-center gap-5 text-sm">
-        <a href="#services" class="hover:text-brand-600">Services</a>
-        <a href="#approach" class="hover:text-brand-600">Approach</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-full text-white brand-gradient shadow-soft hover:opacity-95">
+  <!-- bottom hills -->
+  <div aria-hidden="true"
+       class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
+    <img src="./footer-hills.png" alt="" class="w-full h-auto" />
+  </div>
+
+  <!-- main content -->
+  <div class="relative z-10 mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-center">
+    <!-- LEFT: text -->
+    <div>
+      <p class="uppercase tracking-wider text-slate-600 font-semibold text-xs mb-3">
+        Auckland • Small business • AI training
+      </p>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-[#002b59] leading-tight">
+        AI that frees you to serve clients better.
+      </h1>
+      <p class="mt-4 text-[#0b294b] text-base sm:text-lg max-w-xl">
+        KS Consultants shows your team how to use AI, automation, and Gemini / ChatGPT safely so you can spend less time on admin and more time growing your business.
+      </p>
+      <p class="mt-2 text-sm sm:text-base text-[#0b294b]">
+        We make AI usable, teachable, and profitable for your team.
+      </p>
+
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a href="#contact"
+           class="px-5 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF] shadow-soft text-center">
           Book a Consultation
         </a>
-      </nav>
-      <button id="menuBtn" class="md:hidden px-3 py-1.5 rounded-lg border border-slate-300">Menu</button>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
-      <div class="px-4 py-3 flex flex-col gap-2 text-sm">
-        <a href="#services" class="hover:text-brand-600">Services</a>
-        <a href="#approach" class="hover:text-brand-600">Approach</a>
-        <a href="#about" class="hover:text-brand-600">About</a>
-        <a href="#contact" class="px-3 py-1.5 rounded-lg text-white brand-gradient w-max">Book a Consultation</a>
+        <a href="#services"
+           class="px-5 py-2.5 rounded-full text-[#0f172a] ring-1 ring-slate-200 bg-white text-center hover:bg-slate-50">
+          What we do
+        </a>
       </div>
+
+      <p class="mt-4 text-xs text-slate-500">
+        Founded in Auckland by Kent Somerville • KS Consultants — Experts in AI
+      </p>
     </div>
-  </header>
+
+    <!-- RIGHT: info card -->
+    <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
+          <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm text-slate-700">
+        <li>• Automate 1–2 manual client processes per week</li>
+        <li>• Train staff to use Gemini / ChatGPT in NZ context</li>
+        <li>• Create reusable AI prompts for reports & comms</li>
+      </ul>
+      <a href="#contact"
+         class="mt-5 inline-flex justify-center w-full px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF]">
+        Talk to us about your team
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <main>
 
