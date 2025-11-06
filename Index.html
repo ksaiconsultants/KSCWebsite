@@ -55,12 +55,10 @@
       0%,100% { transform: translateY(0); }
       50%     { transform: translateY(-4px); }
     }
-    /* Smaller, gentler float for card logo */
     @keyframes ksc-float-sm {
       0%,100% { transform: translateY(0); }
       50%     { transform: translateY(-2px); }
     }
-
     @media (prefers-reduced-motion: reduce) {
       .anim-fade-up, .anim-float, .anim-float-sm, .logo-tilt { animation: none !important; transition: none !important; }
     }
@@ -68,6 +66,7 @@
     .logo-tilt:hover { transform: translateY(-2px) rotate(-.6deg) scale(1.01); filter: drop-shadow(0 10px 18px rgba(0,0,0,.18)); }
   </style>
 </head>
+
 <body class="bg-white text-slate-900 font-sans antialiased">
 
   <!-- HEADER -->
@@ -91,6 +90,7 @@
       </nav>
       <button id="menuBtn" class="md:hidden px-3 py-1.5 rounded-lg border border-slate-300">Menu</button>
     </div>
+
     <div id="mobileNav" class="md:hidden hidden border-t border-slate-200">
       <div class="px-4 py-3 flex flex-col gap-2 text-sm">
         <a href="#services" class="hover:text-brand-600">Services</a>
@@ -106,18 +106,14 @@
 
     <!-- HERO -->
     <section class="relative pt-16 pb-28 bg-white overflow-hidden" id="home">
-      <!-- back hills -->
       <div aria-hidden="true" class="pointer-events-none select-none absolute inset-x-0 -bottom-6 sm:-bottom-10 z-0">
         <img src="./footer-hills.png" alt="" class="w-full h-auto" />
       </div>
-      <!-- white overlay ABOVE hills for contrast -->
       <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-white/85 to-transparent z-10"></div>
 
-      <!-- shared grid -->
       <div class="relative z-20 mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-center">
         <!-- LEFT -->
         <div>
-          <!-- enlarged animated logo -->
           <div class="mb-6">
             <img src="./logo-full.png" alt="KS Consultants logo"
                  class="h-64 sm:h-72 w-auto logo-tilt anim-fade-up"
@@ -150,28 +146,27 @@
         </div>
 
         <!-- RIGHT card -->
-<div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6
-            lg:mt-24 xl:mt-28">
-  <div class="flex items-center gap-3 mb-4">
-    <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto anim-fade-up"
-         style="animation: ksc-fade-up .6s ease-out both, ksc-float-sm 8s ease-in-out 1.2s infinite; will-change: transform;">
-    <div>
-      <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
-      <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
-    </div>
-  </div>
-  <ul class="space-y-3 text-sm text-slate-700">
-    <li>• Automate 1–2 manual client processes per week</li>
-    <li>• Train staff to use Gemini / ChatGPT in NZ context</li>
-    <li>• Create reusable AI prompts for reports & comms</li>
-  </ul>
-  <a href="#contact"
-     class="mt-5 inline-flex justify-center w-full px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF]">
-    Talk to us about your team
-  </a>
-</div>
-</div>
-</section>
+        <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6 lg:mt-24 xl:mt-28">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto anim-fade-up"
+                 style="animation: ksc-fade-up .6s ease-out both, ksc-float-sm 8s ease-in-out 1.2s infinite; will-change: transform;">
+            <div>
+              <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
+              <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
+            </div>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-700">
+            <li>• Automate 1–2 manual client processes per week</li>
+            <li>• Train staff to use Gemini / ChatGPT in NZ context</li>
+            <li>• Create reusable AI prompts for reports & comms</li>
+          </ul>
+          <a href="#contact"
+             class="mt-5 inline-flex justify-center w-full px-4 py-2.5 rounded-full text-white bg-gradient-to-r from-[#00366F] to-[#00A8FF]">
+            Talk to us about your team
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- SERVICES -->
     <section id="services" class="py-12 sm:py-14 bg-slate-50">
