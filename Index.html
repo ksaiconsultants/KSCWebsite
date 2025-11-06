@@ -55,8 +55,14 @@
       0%,100% { transform: translateY(0); }
       50%     { transform: translateY(-4px); }
     }
+    /* Smaller, gentler float for card logo */
+    @keyframes ksc-float-sm {
+      0%,100% { transform: translateY(0); }
+      50%     { transform: translateY(-2px); }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-      .anim-fade-up, .anim-float, .logo-tilt { animation: none !important; transition: none !important; }
+      .anim-fade-up, .anim-float, .anim-float-sm, .logo-tilt { animation: none !important; transition: none !important; }
     }
     .logo-tilt { transition: transform .25s ease, filter .25s ease; transform-origin: 50% 60%; }
     .logo-tilt:hover { transform: translateY(-2px) rotate(-.6deg) scale(1.01); filter: drop-shadow(0 10px 18px rgba(0,0,0,.18)); }
@@ -111,9 +117,10 @@
       <div class="relative z-20 mx-auto max-w-6xl px-4 grid lg:grid-cols-2 gap-10 items-center">
         <!-- LEFT -->
         <div>
+          <!-- enlarged animated logo -->
           <div class="mb-6">
             <img src="./logo-full.png" alt="KS Consultants logo"
-                 class="h-32 sm:h-36 w-auto logo-tilt anim-fade-up"
+                 class="h-64 sm:h-72 w-auto logo-tilt anim-fade-up"
                  style="animation: ksc-fade-up .7s ease-out both, ksc-float 7s ease-in-out 1s infinite; will-change: transform;">
           </div>
           <p class="uppercase tracking-wider text-slate-600 font-semibold text-xs mb-3">
@@ -145,7 +152,8 @@
         <!-- RIGHT card -->
         <div class="bg-white border border-slate-200 rounded-2xl shadow-[0_18px_40px_-12px_rgba(0,0,0,.25)] p-6">
           <div class="flex items-center gap-3 mb-4">
-            <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto">
+            <img src="./logo-full.png" alt="KS Consultants" class="h-10 w-auto anim-fade-up"
+                 style="animation: ksc-fade-up .6s ease-out both, ksc-float-sm 8s ease-in-out 1.2s infinite; will-change: transform;">
             <div>
               <p class="text-xs uppercase tracking-wide text-slate-400">AI readiness snapshot</p>
               <p class="text-sm font-semibold text-slate-900">3 ways AI can help you today</p>
@@ -175,7 +183,7 @@
             <p class="mt-2 text-sm text-slate-600">Audit current tools, map 90-day AI wins, align to NZ privacy.</p>
           </article>
 
-          <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
+        <article class="bg-white border border-slate-200 rounded-xl p-5 hover:shadow-soft transition reveal">
             <h3 class="font-semibold">Team Training (Gemini / ChatGPT)</h3>
             <p class="mt-2 text-sm text-slate-600">Workshops and PD so staff actually use AI every day.</p>
           </article>
